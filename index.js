@@ -84,6 +84,9 @@ bot.on('message', message=>{
         case 'yardim':
             message.channel.sendMessage ('Yardım için -help yazabilirsiniz.')
             break;
+        case 'kizy':
+            message.channel.sendMessage ('is hacking')
+            break;
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
             let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
