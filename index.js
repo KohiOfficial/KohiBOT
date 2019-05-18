@@ -16,9 +16,8 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `/help`,
-            type: "STREAMING",
-            url: "https://www.twitch.tv/riotbae"
+            name: `KohiBOT /help`,
+            type: "PLAYING",
         }
     });
 });
