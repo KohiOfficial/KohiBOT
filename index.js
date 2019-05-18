@@ -81,7 +81,7 @@ bot.on('message', message=>{
         case 'hakkinda':
             message.channel.sendMessage (KohiBOT Kohi tarafindan olusturulan bir discord botudur. Fazla seyler icermese de. Yakinda cok iyi bir hale gelecek.)
             break;
-             default:
+            default:
             message.channel.send("That command doesn't exist")
             break;
 
