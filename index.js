@@ -84,25 +84,20 @@ bot.on('message', message=>{
         case 'yardim':
             message.channel.sendMessage ('Yardım için -help yazabilirsiniz.')
             break;
-        case 'kick':
-            if(!args[1]) message.channel.send('You need to specify a person')
-                                          
-            const userr = message.mentions.users.first();
-            
-            if(user){
-                const memberr = member.guild.member(user);
-                
-                if(member){
-                    member.kick('You were kicked for breaking thr rules.').then(() =>{
-                        message.reply(`Successfully kicked ${user.tag}`);
-                    }).catch(err =>{
-                        message.reply('I was unable to kick that member');
-                        console.log(err);
-                    });
-                } else{
-                    message.reply("That user isn\´t in the guild")
-                } else {
-                    message.reply('that user isn\'t in the guild");
+        case "kick":
+            if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
+            let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+            if (!kickUser) return message.channel.send(`Can't find user `);
+            let kickReason = args.slice(2).join(" ") || "no reason";
+            if(kickUser.hasPermission("ADMINISTRATOR")) return message.channel.send(`You can't kick this person`);
+
+            message.guild.member(kickUser).kick(kickReason);
+    try{
+            kickUser.send(`You have been kicked from ${message.guild.name} for ${kickReason}`);
+    }catch{
+        console.log(Error);
+    }
+            break;
                                   
           
             default:
