@@ -85,12 +85,12 @@ bot.on('message', message=>{
             message.channel.sendMessage ('Yardım için -help yazabilirsiniz.')
             break;
         case 'kick':
-            if(!args[1]) message.channel.('You need to specify a person)
+            if(!args[1]) message.channel.send('You need to specify a person')
                                           
-            const user = message.mentions.users.first();
+            const userr = message.mentions.users.first();
             
             if(user){
-                const member = member.guild.member(user);
+                const memberr = member.guild.member(userr);
                 
                 if(member){
                     member.kick('You were kicked for breaking thr rules.').then(() =>{
