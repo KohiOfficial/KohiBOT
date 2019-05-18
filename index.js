@@ -79,10 +79,10 @@ bot.on('message', message=>{
             message.channel.sendMessage ('KohiBOT is a discord bot created by Kohi. It have some cool stuff. Thats all, for now..')
             break;
         case 'hakkinda':
-            message.channel.sendMessage (KohiBOT Kohi tarafindan olusturulan bir discord botudur. Fazla seyler icermese de. Yakinda cok iyi bir hale gelecek.)
+            message.channel.sendMessage ('KohiBOT Kohi tarafindan olusturulan bir discord botudur. Fazla seyler icermese de. Yakinda cok iyi bir hale gelecek.')
             break;
             default:
-            message.channel.send("That command doesn't exist")
+            message.channel.send("That command doesn't exist / Böyle bir komut yok")
             break;
 
             
