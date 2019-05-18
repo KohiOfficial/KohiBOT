@@ -45,7 +45,7 @@ bot.on('message', message=>{
         case "help":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
-           .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger")
+           .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger - about")
            .addField("MODERATOR COMMANDS", "clear")
            .setColor(0xFFFFFF);
            
