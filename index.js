@@ -84,6 +84,26 @@ bot.on('message', message=>{
         case 'yardim':
             message.channel.sendMessage ('Yardım için -help yazabilirsiniz.')
             break;
+        case 'kick':
+            if(!args[1]) message.channel.('You need to specify a person)
+                                          
+            const user = message.mentions.users.first();
+            
+            if(user){
+                const member = member.guild.member(user);
+                
+                if(member){
+                    member.kick('You were kicked for breaking thr rules.').then(() =>{
+                        message.reply(`Successfully kicked ${user.tag}`);
+                    }).catch(err =>{
+                        message.reply('I was unable to kick that member');
+                        console.log(err);
+                    });
+                } else{
+                    message.reply("That user isn\´t in the guild")
+                } else {
+                    message.reply('that user isn\'t in the guild");
+                                  
           
             default:
             message.channel.send("That command doesn't exist / Böyle bir komut yok")
