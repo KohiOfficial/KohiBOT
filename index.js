@@ -98,6 +98,20 @@ bot.on('message', message=>{
         console.log(Error);
     }
             break;
+        case "ban":
+            if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(`You can't use this command`);
+            let banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+            if (!banUser) return message.channel.send(`Can't find user `);
+            let banReason = args.slice(2).join(" ") || "no reason";
+            if(banUser.hasPermission("ADMINISTRATOR")) return message.channel.send(`You can't ban this person`);
+
+            message.guild.member(banUser).ban(banReason);
+    try{
+            banUser.send(`You have been banned from ${message.guild.name} for ${banReason}`);
+    }catch{
+        console.log(Error);
+    }
+            break;
                                   
           
             default:
