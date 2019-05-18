@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const token = 'NTc4OTQ3ODg2NzM4MzA5MTMw.XN7BbQ.HsjWLCXp39DRdQtsfbHQbqeujRc';
 
 const PREFIX = '/';
 
@@ -10,6 +9,8 @@ var version = '1.0.0';
 bot.on('ready', () =>{
     console.log('This bot is online!');
 })
+
+
 
 bot.on('ready', () => {
     bot.user.setStatus('available')
@@ -85,4 +86,4 @@ bot.on('message', message=>{
     }
 })
 
-bot.login(token);
+bot.login(process.env.token);
