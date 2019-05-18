@@ -83,6 +83,7 @@ bot.on('message', message=>{
             break;
         case 'yardim':
             message.channel.sendMessage ('Yardım için -help yazabilirsiniz.')
+            break;
           
             default:
             message.channel.send("That command doesn't exist / Böyle bir komut yok")
