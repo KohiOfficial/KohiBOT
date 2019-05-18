@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '/';
 
-var version = '1.0.0';
+var version = '1.0.';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -81,6 +81,15 @@ bot.on('message', message=>{
         case 'beepboop':
             message.channel.sendMessage ('boop bip')
             break;
+        case "yardım":
+            let helpEmbed = new Discord.RichEmbed()
+           .setTitle("Yardım Bilgisi")
+           .addField("ÜYE KOMUTLARI", "ping - kohi - yourmom - info - embed - beepboop - eyecon - kohibot - burger - whirlaroni")
+           .addField("MODERATOR KOMUTLARI", "clear")
+           .setColor(0xFFFFFF);
+           
+           message.author.send(helpEmbed)
+           break;
     
     }
 })
