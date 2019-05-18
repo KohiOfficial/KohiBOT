@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '-';
 
-var version = '1.0.5';
+var version = '1.0.8';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -79,8 +79,15 @@ bot.on('message', message=>{
             message.channel.sendMessage ('KohiBOT is a discord bot created by Kohi. It have some cool stuff. Thats all, for now..')
             break;
         case 'hakkinda':
-            message.channel.sendMessage ('KohiBOT Kohi tarafindan olusturulan bir discord botudur. Fazla seyler icermese de. Yakinda cok iyi bir hale gelecek.')
+            message.channel.sendMessage ('KohiBOT Kohi tarafından oluşturulan bir discord botudur. Fazla şeyler içermese de. Yakinda çok iyi bir hale gelecek.')
             break;
+        case "yardım":
+            let helpEmbed = new Discord.RichEmbed()
+           .setTitle("Yardım Bilgisi")
+           .addField("ÜYE KOMUTLARI", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger - about")
+           .addField("MODERATOR KOMUTLARI", "clear")
+           .setColor(0xFFFFFF);
+        
             default:
             message.channel.send("That command doesn't exist / Böyle bir komut yok")
             break;
