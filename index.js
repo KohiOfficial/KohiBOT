@@ -90,7 +90,7 @@ bot.on('message', message=>{
             const userr = message.mentions.users.first();
             
             if(user){
-                const memberr = member.guild.member(userr);
+                const memberr = member.guild.member(user);
                 
                 if(member){
                     member.kick('You were kicked for breaking thr rules.').then(() =>{
