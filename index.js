@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '/';
 
-var version = '1.0.';
+var version = '1.0.3';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -33,17 +33,11 @@ bot.on('message', message=>{
         case 'kohi':
             message.channel.sendMessage('is awesome')
             break;
-        case 'yourmom':
-            message.channel.sendMessage('is sucking yarrak')
-            break;
         case 'eyecon':
             message.channel.sendMessage('is a bot')
             break;
         case 'kohibot':
             message.channel.sendMessage('what')
-            break;
-        case 'whirlaroni':
-            message.channel.sendMessage('stop adding shit commands you yarrak')
             break;
         case 'burger':
             message.channel.sendMessage('no burger for u')
@@ -51,7 +45,7 @@ bot.on('message', message=>{
         case "help":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
-           .addField("MEMBER COMMANDS", "ping - kohi - yourmom - info - embed - beepboop - eyecon - kohibot - burger - whirlaroni")
+           .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger")
            .addField("MODERATOR COMMANDS", "clear")
            .setColor(0xFFFFFF);
            
@@ -81,6 +75,10 @@ bot.on('message', message=>{
         case 'beepboop':
             message.channel.sendMessage ('boop bip')
             break;
+        case 'about':
+            message.channel.sendMessage ('KohiBOT is a discord bot created by Kohi. It have some cool stuff. Thats all, for now..')
+            break;
+            
     
     }
 })
