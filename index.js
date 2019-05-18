@@ -81,15 +81,6 @@ bot.on('message', message=>{
         case 'beepboop':
             message.channel.sendMessage ('boop bip')
             break;
-        case "yardim":
-            let helpEmbed = new Discord.RichEmbed()
-           .setTitle("Yardim Bilgisi")
-           .addField("UYE KOMUTLARI", "ping - kohi - yourmom - info - embed - beepboop - eyecon - kohibot - burger - whirlaroni")
-           .addField("MODERATOR KOMUTLARI", "clear")
-           .setColor(0xFFFFFF);
-           
-           message.author.send(helpEmbed)
-           break;
     
     }
 })
