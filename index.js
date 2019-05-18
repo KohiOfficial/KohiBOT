@@ -16,7 +16,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `KohiBOT /help`,
+            name: `KohiBOT | /help`,
             type: "PLAYING",
         }
     });
