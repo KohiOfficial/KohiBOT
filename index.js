@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 
-const PREFIX = '>';
+const PREFIX = '-';
 
-var version = '1.0.3';
+var version = '1.0.5';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -16,7 +16,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `KohiBOT | >help`,
+            name: `KohiBOT | -help`,
             type: "PLAYING",
         }
     });
