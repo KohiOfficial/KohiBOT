@@ -46,7 +46,7 @@ bot.on('message', message=>{
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
            .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger - about")
-           .addField("MODERATOR COMMANDS", "clear")
+           .addField("MODERATOR COMMANDS", "clear - ban - kick")
            .setColor(0xFFFFFF);
            
            message.author.send(helpEmbed)
