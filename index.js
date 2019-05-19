@@ -68,7 +68,7 @@ bot.on('message', message=>{
             .addField('Player Name', message.author.username)
             .addField('Version', version)
             .addField('Current Server', message.guild.name)
-            .addField(message.author.username, "Roles: " + message.member.roles.map(role => role.name).join(", ")) // user, roles
+            .addField(Roles, "Roles: " + message.member.roles.map(role => role.name).slice(1).join(", ")) // user, roles
             .setColor(0x33FF9F)
             .setThumbnail(message.author.avatarURL);
             message.channel.sendEmbed(embed);
