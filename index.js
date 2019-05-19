@@ -68,7 +68,8 @@ bot.on('message', message=>{
             .addField('Player Name', message.author.username)
             .addField('Version', version)
             .addField('Current Server', message.guild.name)
-            .addField('Roles', message.role.name)
+            .addField('Roles', message.member.roles)
+            .addField("Stats", "XP: 0/100 Level 0") // XP, Level?
             .setColor(0x33FF9F)
             .setThumbnail(message.author.avatarURL);
             message.channel.sendEmbed(embed);
