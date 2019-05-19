@@ -45,7 +45,7 @@ bot.on('message', message=>{
         case "help":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
-           .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger - about")
+           .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger - about - ekmek - bread")
            .addField("MODERATOR COMMANDS", "clear - ban - kick")
            .setColor(0xFFFFFF);
            
@@ -95,6 +95,7 @@ bot.on('message', message=>{
             break;
         case 'ekmek':
             message.user.sendMessage ('İşte ekmeğin burada!\:bread:')
+            break;
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
             let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
