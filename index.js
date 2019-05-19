@@ -106,7 +106,7 @@ bot.on('message', message=>{
             break;
          case 'give':
             if(args[1] === 'money'){
-                message.channel.sendMessage('Here is your money rich boi \:moneybag:');
+                message.channel.sendMessage('no');
             }else{
                 message.channel.sendMessage('Invalid Args')
             }
