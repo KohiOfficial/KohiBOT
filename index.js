@@ -98,6 +98,7 @@ bot.on('message', message=>{
             break;
         case 'coffee':
             message.channel.sendMessage ('Lets chill\, here is your coffe \:wink: \:coffee:')
+            break;
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
             let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
