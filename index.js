@@ -108,7 +108,7 @@ bot.on('message', message=>{
             if(args[1] === 'money'){
                 message.channel.sendMessage('no');
             }else{
-                message.channel.sendMessage('Invalid Args')
+                message.channel.sendMessage('Thats not how it works lol')
             }
             break;
         case "kick":
