@@ -119,17 +119,6 @@ bot.on('message', message=>{
     }
             break;
             
-            if(cmd === `${prefix}botinfo`){
-              
-                let bicon = bot.user.displayAvatarURL;
-                let botembed = new Discord.RichEmbed()
-               .setDescription("Bot Information")
-               .setColor("#4286f4")
-               .set.Thumbnail(bicon);
-               .addField("Bot Name", bot.user.username);
-                             
-                return message.channel.send(botembed);
-            }
                                   
           
             default:
