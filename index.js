@@ -68,7 +68,7 @@ bot.on('message', message=>{
             .addField('Player Name', message.author.username)
             .addField('Version', version)
             .addField('Current Server', message.guild.name)
-            .addField('Roles', message.member.roles)
+            .addField(message.author.username, "Roles: " + message.member.roles.map(role => role.name).join(", ")) // user, roles
             .addField("Stats", "XP: 0/100 Level 0") // XP, Level?
             .setColor(0x33FF9F)
             .setThumbnail(message.author.avatarURL);
