@@ -94,7 +94,7 @@ bot.on('message', message=>{
             message.user.sendMessage ('Here is your bread! \:bread:')
             break;
         case 'ekmek':
-            message.user.sendMessage ('İşte ekmeğin burada!\:bread:')
+            message.user.sendMessage ('İşte ekmeğin burada! \:bread:')
             break;
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
