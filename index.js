@@ -104,6 +104,13 @@ bot.on('message', message=>{
         case 'kahve':
             message.channel.sendMessage ('Hadi rahatlayalım\, kahveni al \:wink: \:coffee:')
             break;
+         case 'give':
+            if(args[1] === 'money'){
+                message.channel.sendMessage('Here is your money rich boi');
+            }else{
+                message.channel.sendMessage('Invalid Args')
+            }
+            break;
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
             let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
