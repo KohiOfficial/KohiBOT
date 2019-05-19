@@ -118,6 +118,16 @@ bot.on('message', message=>{
         console.log(Error);
     }
             break;
+            if(cmd === `${prefix}botinfo`){
+              
+               let botembed = new Discord.RichEmbed()
+               .setDescription("Bot Information")
+               .setColor("#4286f4")
+               .addField("Bot Name", bot.user.username);
+                
+                       
+                return message.channel.send(botembed);
+            }
                                   
           
             default:
