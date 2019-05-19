@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '-';
 
-var version = '1.0.8';
+var version = '1.1.0';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -45,7 +45,7 @@ bot.on('message', message=>{
         case "help":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
-           .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger - about - ekmek - bread")
+           .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger - about - ekmek - bread - coffee")
            .addField("MODERATOR COMMANDS", "clear - ban - kick")
            .setColor(0xFFFFFF);
            
@@ -96,8 +96,8 @@ bot.on('message', message=>{
         case 'ekmek':
             message.channel.sendMessage ('İşte ekmeğin burada! \:bread:')
             break;
-        case 'coffe':
-            message.channel.sendMessage ('Lets chill\, here is your coffe \:wink: \:coffe:')
+        case 'coffee':
+            message.channel.sendMessage ('Lets chill\, here is your coffe \:wink: \:coffee:')
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
             let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
