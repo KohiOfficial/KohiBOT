@@ -91,8 +91,10 @@ bot.on('message', message=>{
             message.channel.sendMessage ('omg yes brb')
             break;
         case 'bread':
-            message.channel.sendMessage ('Here is your bread! \:bread:')
+            message.user.sendMessage ('Here is your bread! \:bread:')
             break;
+        case 'ekmek':
+            message.user.sendMessage ('İşte ekmeğin burada!\:bread:')
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
             let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
