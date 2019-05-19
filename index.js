@@ -46,7 +46,7 @@ bot.on('message', message=>{
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
            .addField("MEMBER COMMANDS", "ping - kohi - info - embed - beepboop - eyecon - kohibot - burger - about - ekmek - bread - coffee")
-           .addField("MODERATOR COMMANDS", "clear - ban - kick")
+           .addField("ADMIN COMMANDS", "clear - ban - kick")
            .setColor(0xFFFFFF);
            
            message.author.send(helpEmbed)
@@ -68,7 +68,7 @@ bot.on('message', message=>{
             .addField('Player Name', message.author.username)
             .addField('Version', version)
             .addField('Current Server', message.guild.name)
-            .addField('Roles', "Roles: " + message.member.roles.map(role => role.name).slice(1).join(", ")) // user, roles
+            .addField('Roles', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
             .setColor(0x33FF9F)
             .setThumbnail(message.author.avatarURL);
             message.channel.sendEmbed(embed);
