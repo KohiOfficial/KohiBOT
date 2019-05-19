@@ -118,6 +118,7 @@ bot.on('message', message=>{
         console.log(Error);
     }
             break;
+            
             if(cmd === `${prefix}botinfo`){
               
                 let bicon = bot.user.displayAvatarURL;
