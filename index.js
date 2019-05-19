@@ -97,7 +97,10 @@ bot.on('message', message=>{
             message.channel.sendMessage ('İşte ekmeğin burada! \:bread:')
             break;
         case 'coffee':
-            message.channel.sendMessage ('Lets chill\, here is your coffe \:wink: \:coffee:')
+            message.channel.sendMessage ('Lets chill\, here is your coffee \:wink: \:coffee:')
+            break;
+        case 'kahve':
+            message.channel.sendMessage ('Hadi rahatlayalım\, kahveni al \:wink: \:coffee:')
             break;
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
