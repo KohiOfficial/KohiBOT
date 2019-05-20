@@ -108,6 +108,9 @@ bot.on('message', message=>{
         case 'kahve':
             message.channel.sendMessage ('Hadi rahatlayalım\, kahveni al \:wink: \:coffee:')
             break;
+        case 'drinkkohibot':
+            message.channel.sendMessage ('\:surprisedpikachu:')
+            break;
          case 'give':
             if(args[1] === 'money'){
                 message.channel.sendMessage('no');
