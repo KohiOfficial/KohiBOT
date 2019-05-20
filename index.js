@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '-';
 
-var version = '1.1.6';
+var version = '1.2.0';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -16,7 +16,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `KohiBOT | -help`,
+            name: `Line | -help`,
             type: "PLAYING",
         }
     });
@@ -46,7 +46,7 @@ bot.on('message', message=>{
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
            .addField("MEMBER COMMANDS", "info - user - eyecon - kohibot - give")
-           .addField("FUN COMMANDS", "ping - kohi - beepboop - burger - ekmek - bread - coffee - kahve - poem - killkohibot - kohisucks")
+           .addField("FUN COMMANDS", "ping - kohi - beepboop - burger - ekmek - bread - coffee - kahve - poem - lineisbad - kohisucks")
            .addField("ADMIN COMMANDS", "clear - ban - kick")
            .setColor(0xFFFFFF);
            
@@ -103,13 +103,13 @@ bot.on('message', message=>{
             message.channel.sendMessage ('Lets chill\, here is your coffee \:wink: \:coffee:')
             break;
         case 'poem':
-            message.channel.sendMessage ('Roses are red\, Violets are blue\, Omae wa mou\, shindeiru\.')
+            message.channel.sendMessage ('Let me check my list\... oh i dont have poems lol sorry')
             break;
         case 'kahve':
             message.channel.sendMessage ('Hadi rahatlayalım\, kahveni al \:wink: \:coffee:')
             break;
-        case 'killkohibot':
-            message.channel.sendMessage ('\:sweat:')
+        case 'lineisbad':
+            message.channel.sendMessage ('why yu so mean \:cry:')
             break;
         case 'kohisucks':
             message.channel.sendMessage ('He is gonna get mad about this\... \:eyes:')
