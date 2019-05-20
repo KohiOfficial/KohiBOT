@@ -10,7 +10,7 @@ exports.run = async (client, message, args, tools,) => {
     if (!message.member.roles.find(r => r.name === 'roleName')) return message.channel.send('This requires the role: roleName');
     
     // Permission Verification -- This will run only if a user has a certain permission (optional)
-    if (message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('This requires the permission: ADMINISTRATOR');
+    if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('This requires the permission: ADMINISTRATOR');
     
     // First, we want to check if user had a input
     if (!args[0]) return message.channel.send('Proper Usage: <prefix>poll question');
