@@ -112,7 +112,7 @@ bot.on('message', message=>{
             message.channel.sendMessage ('\:sweat:')
             break;
         case 'kohisucks':
-            message.channel.sendMessage ('He is gonna get mad about this\..')
+            message.channel.sendMessage ('He is gonna get mad about this\... \:eyes:')
             break;
          case 'give':
             if(args[1] === 'money'){
