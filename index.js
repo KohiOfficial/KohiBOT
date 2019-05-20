@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '-';
 
-var version = '1.1.0';
+var version = '1.1.3';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -63,7 +63,7 @@ bot.on('message', message=>{
             if(!args[1]) return message.reply('Error please define second arg')
             message.channel.bulkDelete(args[1]);
             break;
-        case 'embed':
+        case 'user':
             const embed = new Discord.RichEmbed()
             .setTitle('User Information')
             .addField('Player Name', message.author.username)
