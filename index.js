@@ -66,9 +66,9 @@ bot.on('message', message=>{
         case 'user':
             const embed = new Discord.RichEmbed()
             .setTitle('User Information')
-            .addField('Player Name', message.author.username)
+            .addField('Username', message.author.username)
             .addField('Version', version)
-            .addField('Current Server', message.guild.name)
+            .addField('Current Server', '2', true, message.guild.name)
             .addField('Roles', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
             .setColor(0x33FF9F)
             .setTimestamp()
