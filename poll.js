@@ -20,7 +20,7 @@ exports.run = async (client, message, args, tools,) => {
         .setColor(0xffffff)
         .setFooter('React to vote.')
         .setDescription(args.join(' '))
-        .setTitle('Poll created by ${message.author.username}');
+        .setTitle(`Poll created by ${message.author.username}`);
     // Finally, using await send the message
     let msg = await message.channel.send(embed);
     // The sent message will now be stored in the msg variable
