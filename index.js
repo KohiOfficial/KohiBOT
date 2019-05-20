@@ -37,7 +37,7 @@ bot.on('message', message=>{
             message.channel.sendMessage('is a bot')
             break;
         case 'kohibot':
-            message.channel.sendMessage('what')
+            message.channel.sendMessage('\:eyes:')
             break;
         case 'burger':
             message.channel.sendMessage('no burger for u')
