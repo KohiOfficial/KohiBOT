@@ -102,6 +102,9 @@ bot.on('message', message=>{
         case 'coffee':
             message.channel.sendMessage ('Lets chill\, here is your coffee \:wink: \:coffee:')
             break;
+        case 'poem':
+            message.channel.sendMessage ('Roses are red\, Violets are blue\, Omae wa mou\, shindeiru\.')
+            break;
         case 'kahve':
             message.channel.sendMessage ('Hadi rahatlayalım\, kahveni al \:wink: \:coffee:')
             break;
