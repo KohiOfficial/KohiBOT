@@ -26,8 +26,8 @@ exports.run = async (client, message, args, tools) => {
     // The sent message will now be stored in the msg variable
     
     // React to the message
-    await msg.react('✅'); // Using await here will make sure the first one runs before second
-    await msg.react('❌');
+    await msg.react('\:white_check_mark:'); // Using await here will make sure the first one runs before second
+    await msg.react('\:no_entry:');
     
    // Make sure you delete the original message 
     message.delete({timeout: 1000});
