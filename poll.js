@@ -26,10 +26,10 @@ exports.run = async (bot, message, args, tools) => {
     // The sent message will now be stored in the msg variable
     
     // React to the message
-    await msg.react('✅');
+    await msg.react('✅'); // Using await here will make sure the first one runs before second
     await msg.react('❌');
     
-    
+   // Make sure you delete the original message 
     message.delete({timeout: 1000});
 
 }
