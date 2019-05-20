@@ -36,7 +36,7 @@ bot.on('message', message=>{
         case 'eyecon':
             message.channel.sendMessage('is a bot')
             break;
-        case 'kohibot':
+        case 'line':
             message.channel.sendMessage('\:eyes:')
             break;
         case 'burger':
@@ -45,7 +45,7 @@ bot.on('message', message=>{
         case "help":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
-           .addField("MEMBER COMMANDS", "info - user - eyecon - kohibot - give")
+           .addField("MEMBER COMMANDS", "info - user - eyecon - line - give")
            .addField("FUN COMMANDS", "ping - kohi - beepboop - burger - ekmek - bread - coffee - kahve - poem - lineisbad - kohisucks")
            .addField("ADMIN COMMANDS", "clear - ban - kick")
            .setColor(0xFFFFFF);
