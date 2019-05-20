@@ -1,7 +1,7 @@
 // This commands requires the discord.js to create embeds
 const Discord = require('discord.js');
 
-exports.run = async (bot, message, args, tools) => {
+exports.run = async (client, message, args, tools) => {
     
     
     // This will contain some extra things
