@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '-';
 
-var version = '1.1.3';
+var version = '1.1.6';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -67,7 +67,7 @@ bot.on('message', message=>{
             const embed = new Discord.RichEmbed()
             .setTitle('User Information')
             .addField('Username', message.author.username)
-            .addField('Version', version)
+            .addField('Bot Version', version)
             .addField('Current Server', message.guild.name)
             .addField('Roles', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
             .setColor(0x33FF9F)
