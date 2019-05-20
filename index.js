@@ -68,7 +68,7 @@ bot.on('message', message=>{
             .setTitle('User Information')
             .addField('Username', message.author.username)
             .addField('Version', version)
-            .addField('Current Server', '2', true, message.guild.name)
+            .addField('Current Server', message.guild.name)
             .addField('Roles', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
             .setColor(0x33FF9F)
             .setTimestamp()
