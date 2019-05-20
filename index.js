@@ -66,7 +66,7 @@ bot.on('message', message=>{
         case 'user':
             const embed = new Discord.RichEmbed()
             .setTitle('User Information')
-            .addField('Username', message.author.user)
+            .addField('Username', message.author.username)
             .addField('Bot Version', version)
             .addField('Current Server', message.guild.name)
             .addField('Roles', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
