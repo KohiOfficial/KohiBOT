@@ -45,7 +45,7 @@ bot.on('message', message=>{
         case "help":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
-           .addField("MEMBER COMMANDS", "info - embed - eyecon - kohibot - give")
+           .addField("MEMBER COMMANDS", "info - user - eyecon - kohibot - give")
            .addField("FUN COMMANDS", "ping - kohi - beepboop - burger - ekmek - bread - coffee - kahve")
            .addField("ADMIN COMMANDS", "clear - ban - kick")
            .setColor(0xFFFFFF);
