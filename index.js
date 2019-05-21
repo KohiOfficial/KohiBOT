@@ -32,32 +32,32 @@ bot.on('message', message=>{
             break;
         case "yardim":
             let helpEmbed = new Discord.RichEmbed()
-           .setTitle("Help Information")
-           .addField("ÜYE KOMUTLARI", "info - user - eyecon - line - give")
-           .addField("FUN COMMANDS", "ping - kohi - beepboop - burger - ekmek - bread - coffee - kahve - poem - lineisbad - kohisucks")
-           .addField("ADMIN COMMANDS", "clear - ban - kick")
+           .setTitle("Yardım Bilgisi")
+           .addField("ÜYE KOMUTLARI", "info - kullanici - hakkinda")
+           .addField("EĞLENCE KOMUTLARI", "beepboop - kizy - reportkizy - ekmek - siir - kahve -")
+           .addField("ADMIN KOMUTLARI", "temizle - ban - kick")
            .setColor(0xFFFFFF);
            
            message.author.send(helpEmbed)
            break;
         case 'info':
             if(args[1] === 'version'){
-                message.channel.sendMessage('Versiyon ' + version);
+                message.channel.sendMessage('Version ' + version);
             }else{
-                message.channel.sendMessage('Buna iznin yok\.')
+                message.channel.sendMessage('Sonradan birşey eklemeyi unuttun\. Örn\: version\.')
             }
             break;
         case 'temizle':
             if(!args[1]) return message.reply('Error please define second arg')
             message.channel.bulkDelete(args[1]);
             break;
-        case 'user':
+        case 'kullanici':
             const embed = new Discord.RichEmbed()
-            .setTitle('User Information')
-            .addField('Username', message.author.username)
+            .setTitle('Kullanıcı Bilgisi')
+            .addField('Kullanıcı Adı', message.author.username)
             .addField('Bot Version', version)
-            .addField('Current Server', message.guild.name)
-            .addField('Roles', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
+            .addField('Olduğu Server', message.guild.name)
+            .addField('Roller', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
             .setColor(0x33FF9F)
             .setTimestamp()
             .setThumbnail(message.author.avatarURL);
@@ -73,7 +73,7 @@ bot.on('message', message=>{
             message.channel.sendMessage ('is hacking')
             break;
         case 'reportkizy':
-            message.channel.sendMessage ('omg yes brb')
+            message.channel.sendMessage ('Hemen hallediyorum\!')
             break;
         case 'ekmek':
             message.channel.sendMessage ('İşte ekmeğin burada! \:bread:')
