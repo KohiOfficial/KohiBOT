@@ -38,6 +38,7 @@ bot.on('message', message=>{
            .addField("ADMIN KOMUTLARI", "```temizle - ban - kick```")
            .setColor(0xFFFFFF);
            
+           if(args[1] === "dm") message.author.send(helpEmbed)
            message.author.send(helpEmbed)
            break;
         case 'info':
