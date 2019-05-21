@@ -56,15 +56,38 @@ bot.on('message', message=>{
             message.channel.bulkDelete(args[1]).then(message.channel.send(`Deleted **${args[1]}** messages`))
             break;
         case 'kullanici':
+            let memberr = message.mentions.members.first() || message.member,
+userr = memberr.user;
+            let online = bot.emojis.find(e => e.name === "Online");
+        let idle = bot.emojis.find(e => e.name === "Idle");
+        let dnd = bot.emojis.find(e => e.name === "DoNotDisturb");
+        let offline = bot.emojis.find(e => e.name === "Offline");
+
+if(userr.presence.status === "online"){
+var stats = `${online} Online`
+};
+
+if(userr.presence.status === "idle"){
+var stats = `${idle} Idle`
+};
+
+if(userr.presence.status === "dnd"){
+var stats = `${dnd} Do Not Disturb`
+};
+
+if(userr.presence.status === "offline"){
+var stats = `${offline} Offline`
+};
             const embed = new Discord.RichEmbed()
             .setTitle('Kullanıcı Bilgisi')
-            .addField('Kullanıcı Adı', message.author.username)
+            .addField('Kullanıcı Adı', memberr.username)
             .addField('Bot Version', version)
             .addField('Olduğu Server', message.guild.name)
+            .addField("Durum",stats)
             .addField('Roller', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
             .setColor(0x33FF9F)
             .setTimestamp()
-            .setThumbnail(message.author.avatarURL);
+            .setThumbnail(memberr.avatarURL);
             message.channel.sendEmbed(embed);
             break;
         case 'beepboop':
