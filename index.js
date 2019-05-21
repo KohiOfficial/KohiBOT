@@ -28,9 +28,9 @@ bot.on('message', message=>{
     if(!message.content.startsWith(PREFIX)) return;
     switch(args[0]){
         case 'burger':
-            message.channel.sendMessage('Delicious burger\! \:hamburger:')
+            message.channel.sendMessage('Lezzetli bir burger\! \:hamburger:')
             break;
-        case "help":
+        case "yardim":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
            .addField("MEMBER COMMANDS", "info - user - eyecon - line - give")
