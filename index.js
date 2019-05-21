@@ -153,7 +153,7 @@ bot.on('message', message=>{
                                   
           
             default:
-            message.channel.send("That command doesn't exist / Böyle bir komut yok")
+            message.channel.send("That command doesn't exist / Böyle bir komut yok gibi görünüyor\, \-help yazarak komut listesine bak")
             break;
 
 
