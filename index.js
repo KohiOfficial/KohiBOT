@@ -72,9 +72,6 @@ bot.on('message', message=>{
         case 'hakkinda':
             message.channel.sendMessage ('Hyphen, Vertical tarafından oluşturulan bir discord botudur. Bazı güzel, eğlenceli, saçma komutlar bulunduruyor. neyse pek bir işe yaradığını söyleyemem \:thinking:')
             break;
-        case 'yardim':
-            message.channel.sendMessage ('Yardım için -help yazabilirsiniz.')
-            break;
         case 'kizy':
             message.channel.sendMessage ('is hacking')
             break;
