@@ -27,20 +27,8 @@ bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
     if(!message.content.startsWith(PREFIX)) return;
     switch(args[0]){
-        case 'ping':
-            message.channel.sendMessage('pong!')
-            break;
-        case 'kohi':
-            message.channel.sendMessage('is awesome')
-            break;
-        case 'eyecon':
-            message.channel.sendMessage('is a bot')
-            break;
-        case 'line':
-            message.channel.sendMessage('\:eyes:')
-            break;
         case 'burger':
-            message.channel.sendMessage('no burger for u')
+            message.channel.sendMessage('Delicious burger\! \:hamburger:')
             break;
         case "help":
             let helpEmbed = new Discord.RichEmbed()
@@ -79,10 +67,10 @@ bot.on('message', message=>{
             message.channel.sendMessage ('boop bip')
             break;
         case 'about':
-            message.channel.sendMessage ('KohiBOT is a discord bot created by Kohi. It have some cool stuff. Thats all, for now..')
+            message.channel.sendMessage ('Hyphen is a discord bot created by Vertical. It have some cool stuff. Thats all, for now..')
             break;
         case 'hakkinda':
-            message.channel.sendMessage ('KohiBOT Kohi tarafından oluşturulan bir discord botudur. Fazla şeyler içermese de. Yakinda çok iyi bir hale gelecek.')
+            message.channel.sendMessage ('Hyphen, Vertical tarafından oluşturulan bir discord botudur. Bazı güzel, eğlenceli, saçma komutlar bulunduruyor. neyse pek bir işe yaradığını söyleyemem \:thinking:')
             break;
         case 'yardim':
             message.channel.sendMessage ('Yardım için -help yazabilirsiniz.')
