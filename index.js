@@ -17,8 +17,7 @@ bot.on('ready', () => {
     bot.user.setPresence({
         game: {
             name: `Hyphen.js | -yardim`,
-            type: "STREAMING",
-            url: "htps://www.twitch.tv/riotbae
+            type: "PLAYING",
         }
     });
 });
@@ -39,7 +38,6 @@ bot.on('message', message=>{
            .addField("ADMIN KOMUTLARI", "```temizle - ban - kick```")
            .setColor(0xFFFFFF);
            
-           if(args[1] === "dm") return message.author.send(helpEmbed)
            message.channel.send(helpEmbed)
            break;
         case 'info':
