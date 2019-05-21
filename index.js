@@ -53,7 +53,7 @@ bot.on('message', message=>{
         case 'temizle':
             if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
             if(!args[1]) return message.reply('Lütfen silmek istediğiniz mesaj sayısını yazın\. \(1 - 10 - 100 sadece)')
-            message.channel.bulkDelete(args[1]);
+            message.channel.bulkDelete(args[1]).then(message.channel.send(`Deleted **${args[1]}** messages`))
             break;
         case 'kullanici':
             const embed = new Discord.RichEmbed()
