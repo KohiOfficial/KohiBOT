@@ -38,7 +38,7 @@ bot.on('message', message=>{
            .addField("EĞLENCE KOMUTLARI", "\```beepboop - kizy - reportkizy - ekmek - siir - kahve - burger - sarki```")
            .addField("ADMIN KOMUTLARI", "\```temizle - ban - kick```")
            .setColor(0xFFFFFF);
-           
+            
            if(args[1] === "dm") return message.author.send(helpEmbed)
            message.channel.send(helpEmbed)
            break;
@@ -51,6 +51,7 @@ bot.on('message', message=>{
             }
             break;
         case 'temizle':
+            if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
             if(!args[1]) return message.reply('Lütfen silmek istediğiniz mesaj sayısını yazın\. \(1 - 10 - 100 sadece)')
             message.channel.bulkDelete(args[1]);
             break;
