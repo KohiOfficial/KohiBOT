@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '-';
 
-var version = '1.2.1';
+var version = '1.2.3';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -16,7 +16,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `Hyphen.js | -help`,
+            name: `Hyphen.js | -yardim`,
             type: "PLAYING",
         }
     });
@@ -42,12 +42,12 @@ bot.on('message', message=>{
            break;
         case 'info':
             if(args[1] === 'version'){
-                message.channel.sendMessage('Version ' + version);
+                message.channel.sendMessage('Versiyon ' + version);
             }else{
-                message.channel.sendMessage('Invalid Args')
+                message.channel.sendMessage('Buna iznin yok\.')
             }
             break;
-        case 'clear':
+        case 'temizle':
             if(!args[1]) return message.reply('Error please define second arg')
             message.channel.bulkDelete(args[1]);
             break;
@@ -66,9 +66,6 @@ bot.on('message', message=>{
         case 'beepboop':
             message.channel.sendMessage ('boop bip')
             break;
-        case 'about':
-            message.channel.sendMessage ('Hyphen is a discord bot created by Vertical. It have some cool stuff. Thats all, for now..')
-            break;
         case 'hakkinda':
             message.channel.sendMessage ('Hyphen, Vertical tarafından oluşturulan bir discord botudur. Bazı güzel, eğlenceli, saçma komutlar bulunduruyor. neyse pek bir işe yaradığını söyleyemem \:thinking:')
             break;
@@ -78,33 +75,17 @@ bot.on('message', message=>{
         case 'reportkizy':
             message.channel.sendMessage ('omg yes brb')
             break;
-        case 'bread':
-            message.channel.sendMessage ('Here is your bread! \:bread:')
-            break;
         case 'ekmek':
             message.channel.sendMessage ('İşte ekmeğin burada! \:bread:')
             break;
-        case 'coffee':
-            message.channel.sendMessage ('Lets chill\, here is your coffee \:wink: \:coffee:')
-            break;
-        case 'poem':
-            message.channel.sendMessage ('Let me check my list\... oh i dont have poems lol sorry')
+        case 'siir':
+            message.channel.sendMessage ('Okuma yazma bilmiyorum\.')
             break;
         case 'kahve':
             message.channel.sendMessage ('Hadi rahatlayalım\, kahveni al \:wink: \:coffee:')
             break;
-        case 'lineisbad':
-            message.channel.sendMessage ('why yu so mean \:cry:')
-            break;
-        case 'kohisucks':
-            message.channel.sendMessage ('He is gonna get mad about this\... \:eyes:')
-            break;
-         case 'give':
-            if(args[1] === 'money'){
-                message.channel.sendMessage('no');
-            }else{
-                message.channel.sendMessage('Thats not how it works lol')
-            }
+        case 'sarki':
+            message.channel.sendMessage ('ENES BATURĞ YOUTOP BUDURCVFDG')
             break;
         case "kick":
             if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`You can't use this command`);
