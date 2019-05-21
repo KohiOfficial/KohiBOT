@@ -80,14 +80,14 @@ var stats = `${offline} Offline`
 };
             const embed = new Discord.RichEmbed()
             .setTitle('Kullanıcı Bilgisi')
-            .addField('Kullanıcı Adı', memberr.username)
+            .addField('Kullanıcı Adı', userr.username)
             .addField('Bot Version', version)
             .addField('Olduğu Server', message.guild.name)
             .addField("Durum",stats)
             .addField('Roller', "Roles: " + message.member.roles.map(role => role).slice(1).join(", ")) // user, roles
             .setColor(0x33FF9F)
             .setTimestamp()
-            .setThumbnail(memberr.avatarURL);
+            .setThumbnail(userr.avatarURL);
             message.channel.sendEmbed(embed);
             break;
         case 'beepboop':
