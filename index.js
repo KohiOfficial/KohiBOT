@@ -18,7 +18,7 @@ bot.on('ready', () => {
         game: {
             name: `Hyphen.js | -yardim`,
             type: "STREAMING",
-            url: "https://www.twitch.tv/riotbae
+            url: "https://www.twitch.tv/riotbae"
         }
     });
 });
