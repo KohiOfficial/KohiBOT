@@ -39,8 +39,10 @@ bot.on('message', message=>{
            .addField("ADMIN KOMUTLARI", "```temizle - ban - kick```")
            .setColor(0xFFFFFF);
            
+           if(args[1] === "dm") return message.author.send(helpEmbed)
            message.author.send(helpEmbed)
            break;
+        
         case 'info':
             if(args[1] === 'version'){
                 message.channel.sendMessage('Version ' + version);
