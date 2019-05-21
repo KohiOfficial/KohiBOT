@@ -48,7 +48,7 @@ bot.on('message', message=>{
             }
             break;
         case 'temizle':
-            if(!args[1]) return message.reply('Error please define second arg')
+            if(!args[1]) return message.reply('Lütfen silmek istediğiniz mesaj sayısını yazın\. \(1 - 10 - 100 sadece)')
             message.channel.bulkDelete(args[1]);
             break;
         case 'kullanici':
