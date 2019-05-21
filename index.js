@@ -16,7 +16,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `Hyphen | -help`,
+            name: `Hyphen.js | -help`,
             type: "PLAYING",
         }
     });
