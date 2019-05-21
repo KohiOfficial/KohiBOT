@@ -33,7 +33,7 @@ bot.on('message', message=>{
         case "yardim":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Help Information")
-           .addField("MEMBER COMMANDS", "info - user - eyecon - line - give")
+           .addField("ÜYE KOMUTLARI", "info - user - eyecon - line - give")
            .addField("FUN COMMANDS", "ping - kohi - beepboop - burger - ekmek - bread - coffee - kahve - poem - lineisbad - kohisucks")
            .addField("ADMIN COMMANDS", "clear - ban - kick")
            .setColor(0xFFFFFF);
