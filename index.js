@@ -40,7 +40,7 @@ bot.on('message', message=>{
            .setColor(0xFFFFFF);
            
            if(args[1] === "dm") return message.author.send(helpEmbed)
-           message.author.send(helpEmbed)
+           message.channel.send(helpEmbed)
            break;
         
         case 'info':
