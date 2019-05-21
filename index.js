@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '-';
 
-var version = '1.2.0';
+var version = '1.2.1';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -16,7 +16,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `Line | -help`,
+            name: `Hyphen.js | -help`,
             type: "PLAYING",
         }
     });
