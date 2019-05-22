@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const PREFIX = '-';
 
-var version = '1.2.5';
+var version = '1.2.7';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
@@ -34,7 +34,7 @@ bot.on('message', message=>{
         case "yardim":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Yardım Bilgisi")
-           .addField("ÜYE KOMUTLARI", "\```info - profil - hakkinda```")
+           .addField("ÜYE KOMUTLARI", "\```info - profil - hakkında```")
            .addField("EĞLENCE KOMUTLARI", "\```beepboop - kizy - reportkizy - ekmek - siir - kahve - burger - sarki```")
            .addField("ADMIN KOMUTLARI", "\```temizle - ban - kick```")
            .setColor(0xFFFFFF);
