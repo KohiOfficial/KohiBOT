@@ -16,7 +16,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `-yardim, -yardim dm`,
+            name: `-yardım, -yardım dm`,
             type: "STREAMING",
             url: "https://www.twitch.tv/riotbae"
         }
@@ -31,7 +31,7 @@ bot.on('message', message=>{
         case 'burger':
             message.channel.sendMessage('Lezzetli bir burger\! \:hamburger:')
             break;
-        case "yardim":
+        case "yardım":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Yardım Bilgisi")
            .addField("ÜYE KOMUTLARI", "\```info - profil - hakkında```")
