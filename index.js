@@ -35,7 +35,7 @@ bot.on('message', message=>{
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Yardım Bilgisi")
            .addField("ÜYE KOMUTLARI", "\```info - profil - hakkında```")
-           .addField("EĞLENCE KOMUTLARI", "\```beepboop - kizy - reportkizy - ekmek - siir - kahve - burger - sarki```")
+           .addField("EĞLENCE KOMUTLARI", "\```beepboop - kizy - reportkizy - ekmek - şiir - kahve - burger - şarkı```")
            .addField("ADMIN KOMUTLARI", "\```temizle - ban - kick```")
            .setColor(0xFFFFFF);
             
