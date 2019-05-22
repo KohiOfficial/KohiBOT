@@ -34,7 +34,7 @@ bot.on('message', message=>{
         case "yardim":
             let helpEmbed = new Discord.RichEmbed()
            .setTitle("Yardım Bilgisi")
-           .addField("ÜYE KOMUTLARI", "\```info - kullanici - hakkinda```")
+           .addField("ÜYE KOMUTLARI", "\```info - profil - hakkinda```")
            .addField("EĞLENCE KOMUTLARI", "\```beepboop - kizy - reportkizy - ekmek - siir - kahve - burger - sarki```")
            .addField("ADMIN KOMUTLARI", "\```temizle - ban - kick```")
            .setColor(0xFFFFFF);
@@ -55,7 +55,7 @@ bot.on('message', message=>{
             if(!args[1]) return message.reply('Lütfen silmek istediğiniz mesaj sayısını yazın\. \(1 - 10 - 100 sadece)')
             message.channel.bulkDelete(args[1]).then(message.channel.send(`Deleted **${args[1]}** messages`))
             break;
-        case 'kullanici':
+        case 'profil':
             let memberr = message.mentions.members.first() || message.member,
 userr = memberr.user;
             let online = bot.emojis.find(e => e.name === "Online");
