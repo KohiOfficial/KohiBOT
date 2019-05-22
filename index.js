@@ -105,13 +105,13 @@ var stats = `${offline} Offline`
         case 'ekmek':
             message.channel.sendMessage ('İşte ekmeğin burada! \:bread:')
             break;
-        case 'siir':
+        case 'şiir':
             message.channel.sendMessage ('Okuma yazma bilmiyorum\.')
             break;
         case 'kahve':
             message.channel.sendMessage ('Hadi rahatlayalım\, kahveni al \:wink: \:coffee:')
             break;
-        case 'sarki':
+        case 'şarkı':
             message.channel.sendMessage ('ENES BATURĞ YOUTOP BUDURCVFDG')
             break;
         case "kick":
