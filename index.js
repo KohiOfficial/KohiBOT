@@ -93,7 +93,7 @@ var stats = `${offline} Offline`
         case 'beepboop':
             message.channel.sendMessage ('boop bip')
             break;
-        case 'hakkinda':
+        case 'hakkında':
             message.channel.sendMessage ('Hyphen, Vertical tarafından oluşturulan bir discord botudur. Bazı güzel, eğlenceli, saçma komutlar bulunduruyor. neyse pek bir işe yaradığını söyleyemem \:thinking:')
             break;
         case 'kizy':
